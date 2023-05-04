@@ -2,11 +2,70 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title></title>
+	<style>
+		* {
+			font-family: Helvetica, Arial;
+		}
+		body {
+			display: grid;
+			grid-template-columns: minmax(0,1fr) clamp(350px,50%,100%) minmax(0,1fr);
+			background-color: black;
+			color: white;
+		}
+		main {
+			grid-column: 2;
+		}
+		img {
+			display: block;
+			margin: auto;
+		}
+		#enterLink {
+			position: relative;
+		}
+		#enterLink > a {
+			position: absolute;
+			left: 50%;
+			transform: translate(-50%, 0);
+			top: 10rem;
+			background-color: black;
+			color: white;
+			width: 50%;
+			text-align: center;
+			padding: 1rem;
+			border-radius: 10px;
+			text-decoration: none;
+			font-weight: bolder;
+			font-size: 1.5rem;
+		}
+		@keyframes hover {
+			0% {
+				margin-top: 2rem;
+			}
+			100% {
+				margin-top: 3rem;
+			}
+		}
+		#halo {
+			margin-top: 2rem;
+			animation: hover 2s alternate ease-in-out infinite;
+			background-image: radial-gradient(closest-side, orange, rgba(0,0,0,0));
+		}
+	</style>
 </head>
 <body>
-	<h1>The Cauldron</h1>
-	<p>A better Minecrafter server. For the sophisticated player.</p>
-	<a href="https://discord.gg/V7YYmbUA5D">Enter ></a>
+	<main>
+		<h1>The Cauldron</h1>
+		<hr>
+		<p>A queer-friendly community Minecraft server</p>
+		<hr>
+		<div id="enterLink">
+			<a href="https://discord.gg/V7YYmbUA5D">Enter</a>
+		</div>
+		<div id="halo">
+			<img src="cauldron_orange.webp" alt="An image of a minecraft cauldron filled with something orange. There is a halo around it, implying it is glowing.">
+		</div>
+	</main>
 </body>
 </html>
